@@ -1,0 +1,40 @@
+Method,Name,Error,Occurrences
+GET,GET /approvals,"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",1
+POST,[setup] POST /indexes/,"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",1
+POST,POST /requests/index_edit,"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",1
+GET,GET /indexes/,HTTPError('500 Server Error: Internal Server Error for url: GET /indexes/'),5
+GET,GET /health,"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",1
+POST,[setup] POST /indexes/,HTTPError('403 Client Error: Forbidden for url: [setup] POST /indexes/'),18
+GET,GET /users/{id}/requests,"ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)",1
+GET,GET /requests/{rid},"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",1
+GET,GET /dashboard/,"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",3
+PUT,PUT /indexes/{id},HTTPError('500 Server Error: Internal Server Error for url: PUT /indexes/{id}'),3
+GET,GET /users/{id},HTTPError('500 Server Error: Internal Server Error for url: GET /users/{id}'),2
+POST,POST /indexes/,HTTPError('403 Client Error: Forbidden for url: POST /indexes/'),101
+GET,GET /users/{id}/requests,HTTPError('500 Server Error: Internal Server Error for url: GET /users/{id}/requests'),1
+GET,GET /users/,HTTPError('500 Server Error: Internal Server Error for url: GET /users/'),5
+GET,GET /dashboard/,HTTPError('500 Server Error: Internal Server Error for url: GET /dashboard/'),4
+GET,GET /notifications (unread),"ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)",1
+PUT,PUT /indexes/{id}/config,HTTPError('500 Server Error: Internal Server Error for url: PUT /indexes/{id}/config'),1
+GET,[setup] GET /notifications,HTTPError('500 Server Error: Internal Server Error for url: [setup] GET /notifications'),2
+PUT,PUT /indexes/{id}/users/{uid},HTTPError('500 Server Error: Internal Server Error for url: PUT /indexes/{id}/users/{uid}'),2
+GET,GET /reports/,HTTPError('403 Client Error: Forbidden for url: GET /reports/'),58
+GET,GET /approvals,HTTPError('500 Server Error: Internal Server Error for url: GET /approvals'),2
+POST,POST /token/refresh,HTTPError('401 Client Error: Unauthorized for url: POST /token/refresh'),1
+POST,POST /indexes/,"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",3
+POST,POST /requests/index_edit,HTTPError('403 Client Error: Forbidden for url: POST /requests/index_edit'),27
+GET,[setup] GET /me,HTTPError('500 Server Error: Internal Server Error for url: [setup] GET /me'),1
+POST,POST /indexes/{id}/users (bulk),HTTPError('500 Server Error: Internal Server Error for url: POST /indexes/{id}/users (bulk)'),2
+GET,GET /me,HTTPError('500 Server Error: Internal Server Error for url: GET /me'),4
+POST,POST /requests/user_edit,HTTPError('403 Client Error: Forbidden for url: POST /requests/user_edit'),31
+GET,GET /indexes/,"ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)",1
+GET,GET /notifications (all),HTTPError('500 Server Error: Internal Server Error for url: GET /notifications (all)'),2
+GET,GET /notifications (unread),HTTPError('500 Server Error: Internal Server Error for url: GET /notifications (unread)'),3
+GET,GET /users/{id},"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",1
+GET,GET /users/{id}/requests,HTTPError('403 Client Error: Forbidden for url: GET /users/{id}/requests'),36
+GET,[setup] GET /notifications,"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",4
+GET,GET /reports/,HTTPError('500 Server Error: Internal Server Error for url: GET /reports/'),2
+GET,GET /users/{id}/indexes,HTTPError('500 Server Error: Internal Server Error for url: GET /users/{id}/indexes'),1
+PUT,PUT /approvals/{rid} [approve],HTTPError('500 Server Error: Internal Server Error for url: PUT /approvals/{rid} [approve]'),1
+POST,[setup] POST /indexes/,HTTPError('500 Server Error: Internal Server Error for url: [setup] POST /indexes/'),4
+POST,[setup] POST /login,HTTPError('500 Server Error: Internal Server Error for url: [setup] POST /login'),22

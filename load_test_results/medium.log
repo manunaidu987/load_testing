@@ -1,0 +1,884 @@
+[2026-03-30 17:18:38,631] DESKTOP-HMRDF1B/INFO/locust.main: Starting Locust 2.43.3
+[2026-03-30 17:18:38,638] DESKTOP-HMRDF1B/INFO/locust.main: Run time limit set to 600 seconds
+[2026-03-30 17:18:38,642] DESKTOP-HMRDF1B/INFO/locust.runners: Ramping to 100 users at a rate of 10.00 per second
+[2026-03-30 17:18:48,127] DESKTOP-HMRDF1B/INFO/locust.runners: All users spawned: {"AdminUser": 60, "PrivilegedUser": 25, "RegularUser": 15} (100 total users)
+[2026-03-30 17:19:20,371] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:20Z <Greenlet at 0x1f69e313740: run_user(<locustfile.AdminUser object at 0x000001F69F6526D0)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:20,568] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:20Z <Greenlet at 0x1f69fffa3e0: run_user(<locustfile.PrivilegedUser object at 0x000001F6A00)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:20,647] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:20Z <Greenlet at 0x1f69fffa020: run_user(<locustfile.AdminUser object at 0x000001F69F6524C0)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:20,739] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:20Z <Greenlet at 0x1f69fffa660: run_user(<locustfile.RegularUser object at 0x000001F69F61F0)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:21,151] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:21Z <Greenlet at 0x1f69fffa7a0: run_user(<locustfile.RegularUser object at 0x000001F69FFF73)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:21,487] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:21Z <Greenlet at 0x1f69fff9ee0: run_user(<locustfile.AdminUser object at 0x000001F69F652C50)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:22,305] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:22Z <Greenlet at 0x1f6a01d4040: run_user(<locustfile.AdminUser object at 0x000001F69FF8FD80)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:22,591] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:22Z <Greenlet at 0x1f69fffbec0: run_user(<locustfile.AdminUser object at 0x000001F69FF8FCD0)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:22,676] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:22Z <Greenlet at 0x1f69fffbd80: run_user(<locustfile.AdminUser object at 0x000001F69FF8FC20)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:22,784] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:22Z <Greenlet at 0x1f69fcfefc0: run_user(<locustfile.PrivilegedUser object at 0x000001F6A01)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:22,877] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:22Z <Greenlet at 0x1f69fffbc40: run_user(<locustfile.AdminUser object at 0x000001F69FF8F070)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:22,959] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:22Z <Greenlet at 0x1f6a01d7b00: run_user(<locustfile.RegularUser object at 0x000001F6A0221A)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:23,060] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:23Z <Greenlet at 0x1f6a01d4400: run_user(<locustfile.PrivilegedUser object at 0x000001F69FF)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:23,164] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:23Z <Greenlet at 0x1f69ff85120: run_user(<locustfile.AdminUser object at 0x000001F69F653EE0)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:23,455] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:23Z <Greenlet at 0x1f6a01d4540: run_user(<locustfile.RegularUser object at 0x000001F69F61AD)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:23,576] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:23Z <Greenlet at 0x1f6a01d6fc0: run_user(<locustfile.AdminUser object at 0x000001F69F6536A0)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:23,741] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:23Z <Greenlet at 0x1f69fffb920: run_user(<locustfile.PrivilegedUser object at 0x000001F6A01)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:23,827] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:23Z <Greenlet at 0x1f6a01d7880: run_user(<locustfile.PrivilegedUser object at 0x000001F6A01)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:23,911] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:23Z <Greenlet at 0x1f6a01d7100: run_user(<locustfile.AdminUser object at 0x000001F69F653D80)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:23,978] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 41: character maps to <undefined>
+2026-03-30T11:49:23Z <Greenlet at 0x1f6a01d76a0: run_user(<locustfile.PrivilegedUser object at 0x000001F6A01)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:24,073] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:24Z <Greenlet at 0x1f6a01d4180: run_user(<locustfile.AdminUser object at 0x000001F69FF8FE30)> failed with UnicodeEncodeError
+
+[2026-03-30 17:19:24,279] DESKTOP-HMRDF1B/ERROR/locust.user.users: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 900, in gevent._gevent_cgreenlet.Greenlet.run
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 198, in run_user
+    user.run()
+    ~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python313\site-packages\locust\user\users.py", line 160, in run
+    self.on_start()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 88, in on_start
+    self._do_login()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\load_testing\locustfile.py", line 102, in _do_login
+    print(f"[WARN] Login FAILED for {self.credentials['email']} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"\u2192 {resp.status_code}: {resp.text[:200]}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 42: character maps to <undefined>
+2026-03-30T11:49:24Z <Greenlet at 0x1f6a01d42c0: run_user(<locustfile.AdminUser object at 0x000001F69FF8FEE0)> failed with UnicodeEncodeError
+

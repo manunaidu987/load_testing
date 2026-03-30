@@ -8,7 +8,7 @@ Run (Web UI):
     locust -f load_test.py
 
 Run (headless):
-    locust -f load_test.py --headless -u 30 -r 3 --run-time 3m --html report.html
+    locust -f load_test.py --headless -u 100 -r 10 --run-time 5m --html report.html
 
 Fixes applied vs v2
 ───────────────────
@@ -518,7 +518,7 @@ class UserAdminTasks(TaskSet):
 
 class AdminUser(BaseAPIUser):
     wait_time   = between(0.5, 2)
-    weight      = 15
+    weight      = 60
     credentials = ADMIN_CREDS
 
     tasks = {
@@ -552,7 +552,7 @@ class PrivilegedUser(BaseAPIUser):
 
 class RegularUser(BaseAPIUser):
     wait_time   = between(2, 5)
-    weight      = 60
+    weight      = 15
     credentials = REGULAR_CREDS
 
     tasks = {
@@ -577,14 +577,33 @@ class SmokeTestUser(BaseAPIUser):
         locust -f load_test.py --headless -u 1 -r 1 --run-time 90s
     """
     wait_time   = between(0.2, 0.5)
-    weight      = 0
+    weight      = 1
     credentials = ADMIN_CREDS
+
+    def _login_as(self, creds: dict):
+        resp = self.client.post(
+            "/app/v1/login",
+            json=creds,
+            name="[smoke] POST /login",
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            self.token = data.get("access_token", self.token)
+            self.refresh_token = data.get("refresh_token", self.refresh_token)
+            self._set_auth_header()
+        return resp
+
+    def _refresh_smoke_identity(self):
+        me = self.client.get("/app/v1/me", name="[smoke] GET /me (identity)")
+        if me.status_code == 200:
+            self.user_id = me.json().get("id", self.user_id)
 
     @task
     def smoke_all_endpoints(self):
         uid = self.user_id    or 1
         iid = self.index_id   or 1
         rid = self.request_id or 1
+        temp_user_id = 0
 
         def get(url, name):
             self.client.get(url, name=f"[smoke] {name}")
@@ -601,12 +620,36 @@ class SmokeTestUser(BaseAPIUser):
                     r.success()
 
         get("/health",                                         "GET /health")
+        reg = post(
+            "/app/v1/register",
+            "POST /register",
+            json={
+                "username": f"smoke_{rnd()}",
+                "email": f"smoke_{rnd()}@example.com",
+                "password": "Password@123",
+            },
+        )
+        if reg.status_code in (200, 201):
+            temp_user_id = reg.json().get("id", 0)
+        else:
+            print(f"[SMOKE][register] status={reg.status_code} body={reg.text[:500]}")
         get("/app/v1/me",                                      "GET /me")
         put("/app/v1/me", "PUT /me",                           json={"username": rnd()})
         get("/app/v1/notifications?unread_only=true",          "GET /notifications")
 
-        nid = self.notif_id or 1
-        put(f"/app/v1/notifications/{nid}/read",               "PUT /notifications/{id}/read")
+        nid = self.notif_id
+        if nid:
+            notif_resp = self.client.put(
+                f"/app/v1/notifications/{nid}/read",
+                name="[smoke] PUT /notifications/{id}/read",
+            )
+            if notif_resp.status_code != 200:
+                print(
+                    f"[SMOKE][notifications-read] id={nid} "
+                    f"status={notif_resp.status_code} body={notif_resp.text[:500]}"
+                )
+        else:
+            print("[SMOKE][notifications-read] skipped because no notification id was found")
 
         post("/app/v1/token",
              "POST /token (OAuth2)",
@@ -625,26 +668,38 @@ class SmokeTestUser(BaseAPIUser):
         get(f"/app/v1/users/{uid}",                            "GET /users/{id}")
         put(f"/app/v1/users/{uid}", "PUT /users/{id}",         json={"username": rnd()})
         get(f"/app/v1/users/{uid}/indexes",                    "GET /users/{id}/indexes")
-        get(f"/app/v1/users/{uid}/requests",                   "GET /users/{id}/requests")
 
-        r = post(f"/app/v1/users/{uid}/requests/config_edit?index_id={iid}",
+        # Request workflow belongs to privileged users in this app.
+        self._login_as(PRIVILEGED_CREDS)
+        self._refresh_smoke_identity()
+        priv_uid = self.user_id or uid
+
+        get(f"/app/v1/users/{priv_uid}/requests",              "GET /users/{id}/requests")
+
+        r = post(f"/app/v1/users/{priv_uid}/requests/config_edit?index_id={iid}",
                  "POST /requests/config_edit", json=INDEX_CONFIG)
         if r.status_code == 200:
             rid = r.json().get("id", rid)
             self.request_id = rid
 
-        r2 = post(f"/app/v1/users/{uid}/requests/user_edit",
+        r2 = post(f"/app/v1/users/{priv_uid}/requests/user_edit",
                   "POST /requests/user_edit", json={"username": rnd()})
         if r2.status_code == 200:
             rid = r2.json().get("id", rid)
 
-        r3 = post(f"/app/v1/users/{uid}/requests/index_edit",
+        r3 = post(f"/app/v1/users/{priv_uid}/requests/index_edit",
                   "POST /requests/index_edit", json={"name": f"se_{rnd()}"})
         if r3.status_code == 200:
             rid = r3.json().get("id", rid)
 
-        get(f"/app/v1/users/{uid}/requests/{rid}",             "GET /requests/{rid}")
-        put(f"/app/v1/users/{uid}/requests/{rid}",             "PUT /requests/{rid}")
+        get(f"/app/v1/users/{priv_uid}/requests/{rid}",        "GET /requests/{rid}")
+        put(f"/app/v1/users/{priv_uid}/requests/{rid}",        "PUT /requests/{rid}")
+        delete(f"/app/v1/users/{priv_uid}/requests/{rid}",     "DELETE /requests/{rid}")
+
+        # Approval workflow belongs to admins.
+        self._login_as(ADMIN_CREDS)
+        self._refresh_smoke_identity()
+        uid = self.user_id or uid
 
         get(f"/app/v1/users/{uid}/approvals",                  "GET /approvals")
         get(f"/app/v1/users/{uid}/approvals/{rid}",            "GET /approvals/{rid}")
@@ -670,6 +725,13 @@ class SmokeTestUser(BaseAPIUser):
              "POST /indexes/{id}/users (bulk)",
              json={"user_ids": [uid]})
         delete(f"/app/v1/indexes/{iid}/users/{uid}",           "DELETE /indexes/{id}/users/{uid}")
+        with self.client.delete(
+            f"/app/v1/indexes/{iid}",
+            name="[smoke] DELETE /indexes/{id}",
+            catch_response=True,
+        ) as r:
+            if r.status_code in (200, 404):
+                r.success()
 
         get("/app/v1/reports/",                                "GET /reports/")
         with self.client.get("/app/v1/reports/1",
@@ -678,5 +740,32 @@ class SmokeTestUser(BaseAPIUser):
             if r.status_code == 404:
                 r.success()
         get("/app/v1/dashboard/",                              "GET /dashboard/")
+
+        with self.client.post(
+            "/app/v1/password/forgot",
+            name="[smoke] POST /password/forgot",
+            catch_response=True,
+        ) as r:
+            if r.status_code in (200, 400, 422):
+                r.success()
+
+        with self.client.post(
+            "/app/v1/password/reset",
+            name="[smoke] POST /password/reset",
+            catch_response=True,
+        ) as r:
+            if r.status_code in (200, 400, 401, 422):
+                r.success()
+
+        post("/app/v1/logout",                                 "POST /logout")
+
+        if temp_user_id:
+            with self.client.delete(
+                f"/app/v1/users/{temp_user_id}",
+                name="[smoke] DELETE /users/{id}",
+                catch_response=True,
+            ) as r:
+                if r.status_code in (200, 404):
+                    r.success()
 
         raise StopUser()
